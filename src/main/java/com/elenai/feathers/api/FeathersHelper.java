@@ -267,10 +267,13 @@ public class FeathersHelper {
 			return Math.max(ArmorHandler.getArmorWeight(armor) -
 					ArmorHandler.getItemEnchantmentLevel(FeathersEnchantments.LIGHTWEIGHT.get(), itemStack) +
 					(ArmorHandler.getItemEnchantmentLevel(FeathersEnchantments.HEAVY.get(), itemStack) * ArmorHandler.getArmorWeight(armor)), 0);
-		} else if (itemStack.getItem() == Items.AIR) {
+		}
+		/*
+		else if (itemStack.getItem() == Items.AIR) {
 			return 0;
 		}
 		Feathers.logger.warn("Attempted to calculate weight of non armor item: " + itemStack.getDescriptionId());
+		*/
 		return 0;
 	}
 
